@@ -16,7 +16,7 @@ def get_arguments():
     parser.add_argument(
         "--index_csv",
         type=str,
-        default="inference_examples/test.csv",
+        default="inference_examples/example.csv",
         help="Specify the index path for molecules.",
     )
     parser.add_argument(
@@ -73,3 +73,5 @@ idx = [i for i in range(len(info))]
 
 with Pool(processes=args.num_threads) as p:
     _ = p.map(get_mol_info, idx)
+
+print("DONE!")

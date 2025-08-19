@@ -41,3 +41,4 @@ for pdb_file in tqdm(data_dir):
 result = [esm2_dict, protein_dict]
 output_path = os.path.join(args.save_pt_dir, "processed_protein.pt")
 torch.save(result, output_path)
+print("DONE!")
